@@ -2,6 +2,7 @@ menu.bootloader=Bootloader
 menu.pcbv=PCB version
 menu.buzzfreq=Buzzer frequency
 menu.checkbattery=Check battery in sleep
+menu.nopoll=Disable poll cards in sleep
 menu.debug=Debug mode
 
 ##############################################################
@@ -54,6 +55,11 @@ sportiduino_bs.menu.checkbattery.no=No
 sportiduino_bs.menu.checkbattery.no.build.opts.checkbattery=
 sportiduino_bs.menu.checkbattery.yes=Yes
 sportiduino_bs.menu.checkbattery.yes.build.opts.checkbattery=-DCHECK_BATTERY_IN_SLEEP
+
+sportiduino_bs.menu.nopoll.no=No
+sportiduino_bs.menu.nopoll.no.build.opts.nopoll=
+sportiduino_bs.menu.nopoll.yes=Yes (wakeup with magnet)
+sportiduino_bs.menu.nopoll.yes.build.opts.nopoll=-DNO_POLL_CARDS_IN_SLEEP_MODE
 
 sportiduino_bs.menu.debug.no=No
 sportiduino_bs.menu.debug.no.build.opts.debug=

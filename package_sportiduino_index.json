@@ -44,6 +44,18 @@
           "size": "3308",
           "boards": [{ "name": "Sportiduino Base Station" }, { "name": "Sportiduino Master Station (Arduino Nano)" }],
           "toolsDependencies": []
+        },
+        {
+          "name": "Sportiduino boards",
+          "architecture": "avr",
+          "version": "1.3.0",
+          "category": "Contributed",
+          "url": "https://github.com/myadzel/BoardsManagerFiles/raw/refs/heads/issue/1/packages/sportiduino_boards-1.3.0.tar.bz2",
+          "archiveFileName": "sportiduino_boards-1.3.0.tar.bz2",
+          "checksum": "SHA-256:fca7fc150f8a123e93d990f869aca43e45e8a41508a0a57d7bd3b2583600e096",
+          "size": "3426",
+          "boards": [{ "name": "Sportiduino Base Station" }, { "name": "Sportiduino Master Station (Arduino Nano)" }],
+          "toolsDependencies": []
         }
       ],
       "tools": []

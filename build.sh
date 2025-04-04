@@ -2,7 +2,7 @@
 
 set -e
 
-PACKAGE_VERSION=1.2.0
+PACKAGE_VERSION=1.3.0
 PACKAGE_NAME=sportiduino_boards
 PACKAGE_FILENAME=${PACKAGE_NAME}-${PACKAGE_VERSION}.tar.bz2
 PACKAGE_DIR=packages
@@ -14,7 +14,7 @@ get_first_word() {
 
 tar --exclude=.git --exclude=.gitignore --exclude=*.swp -cjf "${PACKAGE_PATH}" -C src avr
 PACKAGE_SIZE=$(get_first_word $(wc -c "${PACKAGE_PATH}"))
-PACKAGE_CHECKSUM=$(get_first_word $(sha256sum "${PACKAGE_PATH}"))
+PACKAGE_CHECKSUM=$(get_first_word $(shasum -a 256 "${PACKAGE_PATH}"))
 
 echo "{
   \"name\": \"Sportiduino boards\",
@@ -25,5 +25,7 @@ echo "{
   \"archiveFileName\": \"${PACKAGE_FILENAME}\",
   \"checksum\": \"SHA-256:${PACKAGE_CHECKSUM}\",
   \"size\": \"${PACKAGE_SIZE}\",
+  \"boards\": [{ \"name\": \"Sportiduino Base Station\" }, { \"name\": \"Sportiduino Master Station (Arduino Nano)\" }],
+  \"toolsDependencies\": []
 }"
 
